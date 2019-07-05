@@ -10,6 +10,7 @@ def show
 end 
 
 def signin
+    
     user = User.find_by(name: params[:name])
     if user && user.authenticate(params[:password])
         render json: user 
@@ -20,9 +21,9 @@ end
 
 # def new
 #     user = User.new
-#   end
+#   end  
 
-#   def create
+#   def signup
 #     user = User.create user_params
 #     if user.valid?
 #       user.save
