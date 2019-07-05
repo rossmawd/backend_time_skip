@@ -44,10 +44,10 @@ ActiveRecord::Schema.define(version: 2019_07_05_091116) do
 
   create_table "users", force: :cascade do |t|
     t.string "name"
-    t.string "password_digest"
     t.string "avatar"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "password_digest"
   end
 
   add_foreign_key "contributions", "events"
