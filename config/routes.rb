@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   resources :likes
   resources :contributions
   resources :events
-  resources :users, only: [:show]
+  resources :users, only: [:index, :show]
 
 
   post '/signin', to: 'users#signin'
