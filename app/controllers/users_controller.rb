@@ -24,31 +24,32 @@ def signin
     end
 end
 
-# def new
-#     user = User.new
-#   end  
+def new
+    user = User.new
+end  
 
-#   def signup
-#     user = User.create user_params
-#     if user.valid?
-#       user.save
-#       session[:user_id] = user.id
-#       redirect_to user_path(user)
-#     else
-#       flash[:errors] = user.errors.full_messages
-#       redirect_to new_user_path
-#     end
-#   end
+  def signup
+    user = User.create user_params
+    if user.valid?
+      user.save
+    #   session[:user_id] = user.id
+    #   redirect_to user_path(user)
+    else
+    #   flash[:errors] = user.errors.full_messages
+    #   redirect_to new_user_path
+    puts "OH NO IT DIDNT WORK"
+    end
+  end
 
 # 	def create
 # 		user = User.create(user_params)
 # 		render json: user
 # 	end
 
-# 	private
-# 	def user_params
-# 		params.require(:user).permit(:name, :password)
-# 	end
+	private
+	def user_params
+		params.require(:user).permit(:name, :password)
+	end
 
 
 end

@@ -26,7 +26,6 @@ class ContributionsController < ApplicationController
 		if contribution
 			contribution.destroy
 			render json: contribution
-
 		else
 			render json: {error: "Contribution doesn't exist"}
 		end
