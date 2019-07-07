@@ -14,9 +14,9 @@ Contribution.destroy_all
 # days = ["2 days", "3 days", "4 days", "5 days", "6 days", "A week"]
 # durations += days
 
-User.create(name: "dave", password: "whaveva", avatar: "www.google.com")
-User.create(name: "sam", password: "oop", avatar: "www.google.com")
-User.create(name: "mike", password: "yes", avatar: "www.google.com")
+# User.create(name: "dave", password: "whaveva", avatar: "www.google.com")
+# User.create(name: "sam", password: "oop", avatar: "www.google.com")
+# User.create(name: "mike", password: "yes", avatar: "www.google.com")
 
 
 image_urls = ["https://cdn.pixabay.com/photo/2019/06/12/15/07/cat-4269479_1280.jpg",
@@ -96,5 +96,7 @@ events = Event.create([
                       event_id: Event.all.sample.id,
                       text: Faker::Books::Dune.quote,
                       url: image_urls.sample)
+
   end
+
 
