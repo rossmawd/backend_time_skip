@@ -19,7 +19,6 @@ User.create(name: "sam", password: "oop", avatar: "www.google.com")
 User.create(name: "mike", password: "yes", avatar: "www.google.com")
 
 
-contribution_text = Faker::Books::Dune.quote
 image_urls = ["https://cdn.pixabay.com/photo/2019/06/12/15/07/cat-4269479_1280.jpg",
               "https://ichef.bbci.co.uk/news/768/cpsprodpb/D2E7/production/_106519935_022468588-2.jpg",
               "https://spacecentre.co.uk/wp-content/uploads/2017/06/9460192910_dc82fec48e_k.jpg"]
@@ -95,6 +94,7 @@ events = Event.create([
 10.times do
   Contribution.create(user_id: User.all.sample.id,
                       event_id: Event.all.sample.id,
-                      text: contribution_text,
+                      text: Faker::Books::Dune.quote,
                       url: image_urls.sample)
+  end
 
