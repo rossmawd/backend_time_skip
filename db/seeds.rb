@@ -38,8 +38,6 @@ user = User.create([
 	{name: "Ross", 
 	password: "1234" }
 ])
-
-
 			  
 #SEED DATA FOR TOPICS 
 
