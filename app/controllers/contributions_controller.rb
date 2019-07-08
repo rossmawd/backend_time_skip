@@ -1,10 +1,8 @@
 class ContributionsController < ApplicationController
-
-
-	def index
-		contributions = Contribution.all
-		render json: contributions
-	end
+  def index
+    contributions = Contribution.all
+    render json: contributions
+  end
 
   def show
     contribution = Contribution.find_by(id: params[:id])
@@ -15,27 +13,25 @@ class ContributionsController < ApplicationController
     end
   end
 
-	def create
-		contribution = Contribution.create(contribution_params)
-		render json: contribution
-	end
+  def create
+    #byebug hello
+    contribution = Contribution.create(contribution_params)
+    render json: contribution
+  end
 
-	def destroy
+  def destroy
+    contribution = Contribution.find_by(id: params[:id])
+    if contribution
+      contribution.destroy
+      render json: contribution
+    else
+      render json: { error: "Contribution doesn't exist" }
+    end
+  end
 
-		contribution = Contribution.find_by(id: params[:id])
-		if contribution
-			contribution.destroy
-			render json: contribution
-		else
-			render json: {error: "Contribution doesn't exist"}
-		end
-	end
+  private
 
-
-
-	private
-	def contribution_params
-		params.require(:contribution).permit(:user_id, :event_id, :text, :url)
-	end
-
+  def contribution_params
+    params.require(:contribution).permit(:user_id, :event_id, :text, :url)
+  end
 end
