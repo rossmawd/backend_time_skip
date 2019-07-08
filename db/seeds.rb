@@ -41,11 +41,11 @@ user = User.create([
 	{name: "Ross", 
 	password: "1234", 
 	avatar: "https://gix.uw.edu/wp-content/uploads/2019/01/photo-placeholder.jpeg" }
-
+])
 
 #SEED DATA FOR TOPICS
 
-topic = Topic.create([
+topics = Topic.create([ 
 	{name: "Space",
 	description: "A brief history on space exploration" },
 	{name: "Gaming",
