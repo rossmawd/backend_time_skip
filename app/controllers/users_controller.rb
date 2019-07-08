@@ -32,12 +32,14 @@ end
     user = User.create user_params
     if user.valid?
       user.save
+      render json: user
     #   session[:user_id] = user.id
     #   redirect_to user_path(user)
     else
     #   flash[:errors] = user.errors.full_messages
     #   redirect_to new_user_path
     puts "OH NO IT DIDNT WORK"
+    render json: {error: 'something bad happened'}
     end
   end
 
@@ -48,7 +50,7 @@ end
 
 	private
 	def user_params
-		params.require(:user).permit(:name, :password)
+		params.permit(:name, :password)
 	end
 
 
