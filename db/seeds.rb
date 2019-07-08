@@ -10,6 +10,7 @@ require "faker"
 Contribution.destroy_all
 Topic.destroy_all
 User.destroy_all
+Event.destroy_all
 # directions = ["Northbound", "Southbound", "Eastbound", "Westbound"]
 # issueTypes = ["Closure", "Delay", "Congestion"]
 # durations = ["Less than 30 mins", "A few hours", "For Today"]
@@ -323,7 +324,7 @@ events = Event.create([
 	topic_id: 2}
 ])
 
-10.times do
+100.times do
   Contribution.create(user_id: User.all.sample.id,
                       event_id: Event.all.sample.id,
                       text: Faker::Books::Dune.quote,
