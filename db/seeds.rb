@@ -20,6 +20,7 @@ User.destroy_all
 # User.create(name: "sam", password: "oop", avatar: "www.google.com")
 # User.create(name: "mike", password: "yes", avatar: "www.google.com")
 
+# https://www.dailyinfographic.com/evolution-of-video-games-in-one-epic-timeline
 
 contribution_text = Faker::Books::Dune.quote
 image_urls = ["https://cdn.pixabay.com/photo/2019/06/12/15/07/cat-4269479_1280.jpg",
@@ -32,11 +33,14 @@ image_urls = ["https://cdn.pixabay.com/photo/2019/06/12/15/07/cat-4269479_1280.j
 
 user = User.create([
 	{name: "Zubair", 
-	password: "1234" }, 
+	password: "1234", 
+	avatar: "https://gix.uw.edu/wp-content/uploads/2019/01/photo-placeholder.jpeg" },
 	{name: "Ayleen", 
-	password: "1234" },
+	password: "1234", 
+	avatar: "https://gix.uw.edu/wp-content/uploads/2019/01/photo-placeholder.jpeg" },
 	{name: "Ross", 
-	password: "1234" }
+	password: "1234", 
+	avatar: "https://gix.uw.edu/wp-content/uploads/2019/01/photo-placeholder.jpeg" }
 ])
 			  
 #SEED DATA FOR TOPICS 
@@ -131,195 +135,175 @@ events = Event.create([
 
 #SEED DATA FOR THE SECOND TOPIC
 	{name: "First Arcade Game ",
-	image_url: "https://en.wikipedia.org/wiki/Viking_1#/media/File:Viking_spacecraft.jpg",
+	image_url: "https://www.guinnessworldrecords.com/60/images/60at60/1972.jpg",
 	description: "The first aracde game, Pong is introduced. It becomes a legend as kids flock to local restaurants and convenience stores to play.",
 	date: "01/01/1972" , 
 	topic_id: 2},
 
 	{name: "At-Home Consoles",
-	image_url: "https://www.guinnessworldrecords.com/Images/First-men-on-the-Moon_tcm25-482521.jpg",
+	image_url: "https://www.researchgate.net/profile/Florian_Schaub/publication/48410969/figure/fig7/AS:669386654375945@1536605623765/Atari-2600-the-first-video-game-system.jpg",
 	description: "One of the first at-home consoles is released, the Atari 2600. Worldwide unit sales reach 27,640,000." ,
 	date: "01/01/1977", 
 	topic_id: 2} ,
 
-	{name: "Space Invaders",
-	image_url: "https://media.wired.com/photos/5932bda852d99d6b984e0580/master/w_582,c_limit/118781main_astp_crew_full.jpg",
-	description: "Space Invaders hit arcades, with 60,000 machines popping up all over the U.S.",
-	date: "01/01/1978", 
-	topic_id: 2} ,
+	# {name: "Space Invaders",
+	# image_url: "https://cdn1us.denofgeek.com/sites/denofgeekus/files/styles/main_wide/public/2018/08/space-invaders.png",
+	# description: "Space Invaders hit arcades, with 60,000 machines popping up all over the U.S.",
+	# date: "01/01/1978", 
+	# topic_id: 2} ,
 
 	{name: "Asteroids",
-	image_url: "https://en.wikipedia.org/wiki/Curiosity_(rover)#/media/File:Curiosity_Self-Portrait_at_'Big_Sky'_Drilling_Site.jpg",
+	image_url: "http://twiik.net/sites/default/files/unity/screenshot/asteroids.png",
 	description: "Atari's most successful game, Asteroids, is released.",
 	date: "01/01/1979" , 
 	topic_id: 2} ,
 
 	{name: "Pac-Man",
-	image_url: "https://cdn.geekwire.com/wp-content/uploads/2019/02/190208-starlink-630x356.png" ,
+	image_url: "https://static.giantbomb.com/uploads/original/1/15568/496455-pac_man__1981___atari__3.png" ,
 	description: "Namco's Pac-Man is seen in pizzerias across the country, and the even more popular Mrs. Pac-Man soon follows. Pac-Man ends up selling 350,000 arcade units, bringing in $2 billion in revenue.",
 	date: "01/01/1980", 
 	topic_id: 2} ,
 
 	{name: "Donkey Kong",
-	image_url: "https://i.redd.it/iqpadr2wvykz.jpg",
+	image_url: "https://images2.minutemediacdn.com/image/upload/c_fill,g_auto,h_1248,w_2220/f_auto,q_auto,w_1100/v1555440536/shape/mentalfloss/why-is-this-game-named-after-the-villain.png",
 	description: "We are finally introduced to Mario in the infamous Donkey Kong arcade game. In one year, Donkey Kong sells 60,000 arcade units." ,
 	date: "01/01/1981" , 
 	topic_id: 2} ,
 
-	{name: "Centipede",
-	image_url: "https://i.redd.it/iqpadr2wvykz.jpg",
-	description: "Atari's Centipede is released, too, becoming an arcade favorite." ,
-	date: "01/01/1981" , 
-	topic_id: 2} ,
-
-	{name: "Raking In Big Bucks" ,
-	image_url: "https://www.nasaspaceflight.com/wp-content/uploads/2011/04/A48.jpg",
-	description: "The arcade gaming industry reaches $12 billion in total revenue." ,
-	date: "01/01/1982", 
-	topic_id: 2} ,
-
 	{name: "Nintendo Entertainment System",
-	image_url: "https://upload.wikimedia.org/wikipedia/commons/3/3f/HST-SM4.jpeg",
+	image_url: "http://www.lezebre.eu/hobby/nintendo/ninendo%20photo/Nintendo_NES.jpg",
 	description: "Nintendo Entertainment System (NES) is released, with worldwide sales eventually reaching 61,910,000 units." ,
 	date: "01/01/1985", 
 	topic_id: 2} ,
 
 	{name: "PC Gaming",
-	image_url: "https://upload.wikimedia.org/wikipedia/commons/6/60/Voyager_spacecraft_model.png",
-	description: "PC Games start becoming more and mre advanced and take off with John Madden's Football." ,
+	image_url: "https://cdn.mos.cms.futurecdn.net/LoEHiALAxDBqGEiWWsM8JS.jpg",
+	description: "PC Games start becoming more and more advanced and take off with John Madden's Football." ,
 	date: "01/01/1988", 
 	topic_id: 2},
 
 	{name: "The first handheld system",
-	image_url: "https://cdn.theatlantic.com/assets/media/img/mt/2018/03/39834172044_1d42587cd4_o/lead_720_405.jpg?mod=1533691926",
-	description: "Nintendo releases the first handheld system, the Gameboy, with worldwide sales reaching 118,690,000. Sega releases it's Sega Genesis console complete with Sonic the Hedgehog. 38,700,000 have sold around the globe to date.",
+	image_url: "https://i.ytimg.com/vi/s9DBqPPt2uQ/maxresdefault.jpg",
+	description: "Nintendo releases the first handheld system, the GameBoy, with worldwide sales reaching 118,690,000.",
 	date: "01/01/1989", 
 	topic_id: 2} ,
 
-
 	{name: "Sega Genesis",
-	image_url: "https://cdn.theatlantic.com/assets/media/img/mt/2018/03/39834172044_1d42587cd4_o/lead_720_405.jpg?mod=1533691926",
+	image_url: "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6344/6344945_sd.jpg",
 	description: "Sega releases it's Sega Genesis console complete with Sonic the Hedgehog. 38,700,000 have sold around the globe to date.",
 	date: "01/01/1989", 
 	topic_id: 2} ,
 
-	{name: "Super Nintendo",
-	image_url: "https://upload.wikimedia.org/wikipedia/commons/a/ad/Cosmic_Background_Explorer_spacecraft_model.png",
-	description: "Nintendo releases the Super Nintendo (SNES), which does quite reach the heights of the original NES console. Total worldwide sales are 49,100,000 to date." ,
-	date: "01/01/1991", 
-	topic_id: 2} ,
-
 	{name: "Mortal Kombat",
-	image_url: "https://upload.wikimedia.org/wikipedia/commons/2/2f/Prospero_X-3_model_2012.JPG",
+	image_url: "https://cdn11.bigcommerce.com/s-3m2fqnw/images/stencil/1280x1280/products/8652/16038/Mortal_Kombat_Arcade_Game_Med__12828.1518203481.jpg",
 	description: "Mortal Kombat, one of the first two-player games, comes out in arcades. It sparks the debate among parents about video game violence and how it affects children." ,
 	date: "01/01/1993" , 
 	topic_id: 2} ,
 
 	{name: "Warcraft",
-	image_url: "https://upload.wikimedia.org/wikipedia/commons/b/be/Sputnik_asm.jpg",
+	image_url: "https://www.myabandonware.com/media/screenshots/w/warcraft-orcs-humans-250/warcraft-orcs-humans_8.gif",
 	description: "The first Warcraft game, Warcraft: Orc & Humans, is released on PC, drawing a massive following." ,
 	date: "01/01/1994", 
 	topic_id: 2} , 
 
 
 	{name: "PlayStation",
-	image_url: "https://upload.wikimedia.org/wikipedia/commons/b/be/Sputnik_asm.jpg",
+	image_url: "https://i0.wp.com/metro.co.uk/wp-content/uploads/2018/05/psx-console-wcontroller.jpg",
 	description: "Sony gets in on the gaming industry, releasing the PlayStation. Worldwide sales reach 104,250,000." ,
 	date: "01/01/1995", 
 	topic_id: 2} , 
 
 
-	{name: "Nintendo 64",
-	image_url: "https://upload.wikimedia.org/wikipedia/commons/b/be/Sputnik_asm.jpg",
-	description: "Nintendo comes out with their third console, the Nintendo 64. Sales still don't reach the console's predecessor, ending at 32,930,000." ,
-	date: "01/01/1996", 
-	topic_id: 2} , 
+	# {name: "Nintendo 64",
+	# image_url: "https://upload.wikimedia.org/wikipedia/commons/b/be/Sputnik_asm.jpg",
+	# description: "Nintendo comes out with their third console, the Nintendo 64. Sales still don't reach the console's predecessor, ending at 32,930,000." ,
+	# date: "01/01/1996", 
+	# topic_id: 2} , 
 
 
 	{name: "Dance Dance Revolution",
-	image_url: "https://upload.wikimedia.org/wikipedia/commons/b/be/Sputnik_asm.jpg",
+	image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Dance_Dance_Revolution_North_American_arcade_machine_3.jpg/256px-Dance_Dance_Revolution_North_American_arcade_machine_3.jpg",
 	description: "Konami's Dance Dance Revolution, an interactive game, gets arcade gamers moving. Konami sees 260% increase in net income because of DDR." ,
 	date: "01/01/1999", 
 	topic_id: 2} , 
 
-	{name: "Massive Multi-player Online Games",
-	image_url: "https://upload.wikimedia.org/wikipedia/commons/b/be/Sputnik_asm.jpg",
-	description: "Gamers are first introduced to Massive Multiplayer Online games (MMOs) with the release of the PC hit Everquest." ,
-	date: "01/01/1999", 
-	topic_id: 2} , 
+	# {name: "Massive Multi-player Online Games",
+	# image_url: "https://upload.wikimedia.org/wikipedia/commons/b/be/Sputnik_asm.jpg",
+	# description: "Gamers are first introduced to Massive Multiplayer Online games (MMOs) with the release of the PC hit Everquest." ,
+	# date: "01/01/1999", 
+	# topic_id: 2} , 
 
 
-	{name: "PlayStation 2",
-	image_url: "https://upload.wikimedia.org/wikipedia/commons/b/be/Sputnik_asm.jpg",
-	description: "Sony releases the most popular and most widely distributed console of all time: PlayStation 2. No console has ever beat the worldwide sales record of PS2, at 157,680,000 units to date." ,
-	date: "01/01/2000", 
-	topic_id: 2} , 
+	# {name: "PlayStation 2",
+	# image_url: "https://upload.wikimedia.org/wikipedia/commons/b/be/Sputnik_asm.jpg",
+	# description: "Sony releases the most popular and most widely distributed console of all time: PlayStation 2. No console has ever beat the worldwide sales record of PS2, at 157,680,000 units to date." ,
+	# date: "01/01/2000", 
+	# topic_id: 2} , 
 
 	{name: "Sims",
-	image_url: "https://upload.wikimedia.org/wikipedia/commons/b/be/Sputnik_asm.jpg",
+	image_url: "https://i.redd.it/c1ny8uoiw9n01.png",
 	description: "The Sims is released for PC, drawing a new, more casual audience of gamers." ,
 	date: "01/01/2000", 
 	topic_id: 2} , 
 
-	{name: "GameCube",
-	image_url: "https://upload.wikimedia.org/wikipedia/commons/b/be/Sputnik_asm.jpg",
-	description: "Nintendo released the GameCube, with popular titles like Mario Sunshine, Luigi's Mansion and Super Smash Brothers. Worldwide sales have only reached 21,740,000 to date.." ,
-	date: "01/01/2001", 
-	topic_id: 2} , 
+	# {name: "GameCube",
+	# image_url: "https://upload.wikimedia.org/wikipedia/commons/b/be/Sputnik_asm.jpg",
+	# description: "Nintendo released the GameCube, with popular titles like Mario Sunshine, Luigi's Mansion and Super Smash Brothers. Worldwide sales have only reached 21,740,000 to date.." ,
+	# date: "01/01/2001", 
+	# topic_id: 2} , 
 
 	{name: "Xbox",
-	image_url: "https://upload.wikimedia.org/wikipedia/commons/b/be/Sputnik_asm.jpg",
+	image_url: "http://www.digitaltrends.com/wp-content/uploads/2013/05/The-History-of-the-Xbox-original.jpg",
 	description: "Microsoft gets in on the game, releasing the first Xbox console. Sales can't keep up with Sony, however, reaching 24,650,000 globally to date. Halo becomes one of the most popular games in history, forcing a lot of companies to scramble and release their own First Person Shooter (FPS) games." ,
 	date: "01/01/2001", 
 	topic_id: 2} , 
 
 	{name: "Nintendo DS",
-	image_url: "https://upload.wikimedia.org/wikipedia/commons/b/be/Sputnik_asm.jpg",
+	image_url: "https://gadgetmill.co.uk/wp-content/uploads/2013/07/sell-nintendo-ds.jpg",
 	description: "Arguably the most popular handheld of all time, Nintendo releases the Nintendo DS. Worldwide sales have reached an impressive 154,010,000 units, at the time of putting Nintendo on the map." ,
 	date: "01/01/2004", 
 	topic_id: 2} , 
 
 	{name: "PSP",
-	image_url: "https://upload.wikimedia.org/wikipedia/commons/b/be/Sputnik_asm.jpg",
+	image_url: "https://www.raspberrypi.org/magpi/wp-content/uploads/2016/09/pspi_Raspberry_Pi_psp.jpg",
 	description: "Sony contributes to the handheld market, releasing the PlayStation Portable (PSP). The device features an impressive screen with high-resolution graphics. Worldwide sales have currently reached 80,820,000." ,
 	date: "01/01/2004", 
 	topic_id: 2} , 
 
-
-	{name: "Xbox 360",
-	image_url: "https://upload.wikimedia.org/wikipedia/commons/b/be/Sputnik_asm.jpg",
-	description: "Microsoft continues to better their platform, releasing the Xbox 360. This is the first console featuring high-definition graphics. Though the console includes HD DVD capabilities, this technology eventually loses out to Blu-ray. The 360 have sold 84,000,000 units worldwide to date.." ,
-	date: "01/01/2005", 
-	topic_id: 2} , 
+	# {name: "Xbox 360",
+	# image_url: "https://upload.wikimedia.org/wikipedia/commons/b/be/Sputnik_asm.jpg",
+	# description: "Microsoft continues to better their platform, releasing the Xbox 360. This is the first console featuring high-definition graphics. Though the console includes HD DVD capabilities, this technology eventually loses out to Blu-ray. The 360 have sold 84,000,000 units worldwide to date.." ,
+	# date: "01/01/2005", 
+	# topic_id: 2} , 
 
 	{name: "Call of Duty, Bioshock And More",
-	image_url: "https://upload.wikimedia.org/wikipedia/commons/b/be/Sputnik_asm.jpg",
+	image_url: "http://cdn.pastemagazine.com/www/blogs/lists/call%20of%20duty%20modern%20warfare%203.jpg",
 	description: "Popular titles include Call of Duty, Bioshock, Borderland and Mass Effect. The First Person Shooter game continues to reign." ,
 	date: "01/01/2005", 
 	topic_id: 2} , 
 
 	{name: "Wii",
-	image_url: "https://upload.wikimedia.org/wikipedia/commons/b/be/Sputnik_asm.jpg",
+	image_url: "https://www.capitalfm.co.ke/lifestyle/files/2014/12/wii.jpg",
 	description: "Nintendo changes the game with the release of the interactive console Wii. For the first time, families come together to play video gmes with the Wii's remote sensor system, including games like bowling, archery, golf and more. Nintendo has sold 101,560,000 units worldwide to date." ,
 	date: "01/01/2006", 
 	topic_id: 2} , 
 
 
 	{name: "Rock Band",
-	image_url: "https://upload.wikimedia.org/wikipedia/commons/b/be/Sputnik_asm.jpg",
+	image_url: "https://www.lifewire.com/thmb/dg7xolDieu2KEKhtyatbZlL7TS8=/768x0/filters:no_upscale():max_bytes(150000):strip_icc()/rockband_01-56a7373f3df78cf772935f67.jpg",
 	description: "Rock Band is released, complete with microphone, drum and guitar controllers. This popular title draws in a whole new crowd of gamers wanting more physical interactivity, like DDR used to provide." ,
 	date: "01/01/2007", 
 	topic_id: 2} , 
 
 	{name: "World of Warcraft",
-	image_url: "https://upload.wikimedia.org/wikipedia/commons/b/be/Sputnik_asm.jpg",
+	image_url: "https://i.kinja-img.com/gawker-media/image/upload/s--iDis30wA--/c_scale,f_auto,fl_progressive,q_80,w_800/nyhr4jdq77zvqr7rwbpw.jpg",
 	description: "Now the most popular MMO to date, World of Warcraft is released, redefining the social aspect of gaming." ,
 	date: "01/01/2008", 
 	topic_id: 2} , 
 
-	{name: "Mincraft",
-	image_url: "https://upload.wikimedia.org/wikipedia/commons/b/be/Sputnik_asm.jpg",
-	description: "The very addictive game Mincraft is released for PC and later for console." ,
+	{name: "Minecraft",
+	image_url: "https://images.newscientist.com/wp-content/uploads/2019/05/23165640/h2x1_nswitch_minecraft_image1600w-1-800x533.jpg",
+	description: "The very addictive game Minecraft is released for PC and later for console." ,
 	date: "01/01/2010", 
 	topic_id: 2}
 ])
