@@ -14,12 +14,12 @@ class ContributionsController < ApplicationController
   end
 
   def create
-    #byebug hello
     contribution = Contribution.create(contribution_params)
     render json: contribution
   end
 
   def destroy
+    
     contribution = Contribution.find_by(id: params[:id])
     if contribution
       contribution.destroy
