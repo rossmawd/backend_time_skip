@@ -14,12 +14,24 @@ class ContributionsController < ApplicationController
   end
 
   def create
-    #byebug hello
+    #byebug
     contribution = Contribution.create(contribution_params)
     render json: contribution
   end
 
+  def update
+    #byebug
+    contribution = Contribution.find_by(id: params[:id])
+    if contribution
+      contribution.update(contribution_params)
+      render json: contribution
+    else
+      render json: { error: "Contribution doesn't exist" }
+    end
+  end
+
   def destroy
+    
     contribution = Contribution.find_by(id: params[:id])
     if contribution
       contribution.destroy
