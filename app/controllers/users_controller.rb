@@ -18,7 +18,7 @@ def signin
     
     user = User.find_by(name: params[:name])
     if user && user.authenticate(params[:password])
-        render json: user 
+        render json: {name: user.name, token: issue_token({ id: user.id })}
     else 
         render json: { error: 'Invalid username/password combination.' }, status: 401
     end
@@ -43,10 +43,25 @@ end
     end
   end
 
-# 	def create
-# 		user = User.create(user_params)
-# 		render json: user
-# 	end
+  def validate 
+    user = current_user
+    if user 
+      render json: {name: user.name, token: issue_token({ id: user.id })}
+    else 
+      render json: {error: 'User not found.'}, status: 404
+    end 
+  end 
+
+  def contributions
+    user = current_user
+    if user 
+      render json: user.contributions
+    else
+      render json: {error: 'Invalid token'}
+    end 
+  end 
+
+
 
 	private
 	def user_params
