@@ -29,7 +29,7 @@ user = User.create([
 
 #SEED DATA FOR TOPICS
 
-topic = Topic.create([
+topics = Topic.create([ 
 	{name: "Space",
 	description: "A brief history on space exploration" },
 	{name: "Gaming",
