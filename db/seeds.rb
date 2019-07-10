@@ -1,31 +1,15 @@
 require "faker"
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
+
 
 Contribution.destroy_all
 Topic.destroy_all
 User.destroy_all
 Event.destroy_all
-# directions = ["Northbound", "Southbound", "Eastbound", "Westbound"]
-# issueTypes = ["Closure", "Delay", "Congestion"]
-# durations = ["Less than 30 mins", "A few hours", "For Today"]
-# days = ["2 days", "3 days", "4 days", "5 days", "6 days", "A week"]
-# durations += days
 
-# User.create(name: "dave", password: "whaveva", avatar: "www.google.com")
-# User.create(name: "sam", password: "oop", avatar: "www.google.com")
-# User.create(name: "mike", password: "yes", avatar: "www.google.com")
-
-# https://www.dailyinfographic.com/evolution-of-video-games-in-one-epic-timeline
 
 image_urls = ["https://cdn.pixabay.com/photo/2019/06/12/15/07/cat-4269479_1280.jpg",
               "https://ichef.bbci.co.uk/news/768/cpsprodpb/D2E7/production/_106519935_022468588-2.jpg",
-			  "https://spacecentre.co.uk/wp-content/uploads/2017/06/9460192910_dc82fec48e_k.jpg"]
+			  "https://fsmedia.imgix.net/50/f7/dc/85/e168/49c8/aa81/7124972729eb/the-new-starship-images.jpeg?rect=0%2C35%2C1142%2C571&auto=format%2Ccompress&dpr=2&w=650", "https://i2.wp.com/www.brainpickings.org/wp-content/uploads/2013/11/carlsagan1.jpg?zoom=2&w=680&ssl=1", "https://cdn.vox-cdn.com/thumbor/6tuMUPxwQb3qREUej971MoBl_8E=/0x0:600x350/1820x1213/filters:focal(252x127:348x223):format(webp)/cdn.vox-cdn.com/uploads/chorus_image/image/63386642/A_Consensus_sm.0.jpg"]
 
 
 
@@ -41,7 +25,7 @@ user = User.create([
 	{name: "Ross", 
 	password: "1234", 
 	avatar: "https://gix.uw.edu/wp-content/uploads/2019/01/photo-placeholder.jpeg" }
-])
+  ])
 
 #SEED DATA FOR TOPICS
 
